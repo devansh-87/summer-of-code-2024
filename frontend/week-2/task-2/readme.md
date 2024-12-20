@@ -1,0 +1,4 @@
+ - Uses Tailwind CSS as I found it more easier to use.
+ - Made structure for login page, signup page, cashier page, admin page, analytics page.
+ - Responsive websites.
+ - Tried for Dark theme but couldnt find a working and short method.
