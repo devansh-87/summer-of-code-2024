@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin</title>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <!-- Container -->
+    <div class="container mx-auto p-4 grid gap-4">
+        <!-- Navbar -->
+        <div class="navbar flex justify-between items-center bg-white p-4 rounded shadow">
+            <!-- Logo Section -->
+            <div class="logo text-orange-500 font-bold text-lg">
+                Logo
+            </div>
+            <!-- Shop Name Section -->
+            <div class="shop-name text-center">
+                <h1 class="text-gray-800 text-xl font-semibold">Shop Name</h1>
+                <p id="dayDate" class="date text-gray-500 text-sm">Day, Date (OPTIONAL)</p>
+            </div>
+            <!-- Logout Section -->
+
+            <div class="logout mt-2 md:mt-0 flex gap-5">
+                <div class="analytics">
+                    <a href="admin-analytics.html">
+                        <img class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 h-10"
+                            src="images/image.png" alt="">
+                    </a>
+                </div>
+                <a href="login.html">
+                    <button class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600">
+                        Logout
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- Sidebar -->
+            <div class="bg-white border border-gray-200 p-6 rounded shadow flex flex-col items-center">
+                <div class="w-20 h-20 bg-orange-300 rounded-full flex justify-center items-center text-gray-700 mb-4">
+                    ICON
+                </div>
+                <h2 class="text-lg font-bold text-orange-500 mb-1">NAME</h2>
+                <p class="text-sm text-gray-500 mb-6">Email ID (in small)</p>
+                <button class="bg-orange-500 text-white py-2 px-6 rounded-full shadow hover:bg-orange-600 mb-6">
+                    ADMIN
+                </button>
+                <p id="time" class="text-sm text-gray-400">Display current time*</p>
+            </div>
+
+            <!-- Main Section -->
+            <div class="col-span-1 md:col-span-2 bg-white border border-gray-200 p-6 rounded shadow">
+                <h2 class="text-orange-500 text-xl font-semibold mb-2">Customer Details</h2>
+                <hr class="bg-orange-500 border-0 h-[0.9px] w-full mb-2 rounded-xl">
+                <form class="space-y-4">
+                    <!-- Name Field -->
+                    <div>
+                        <label for="name" class="block text-sm text-gray-600 mb-1">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter name"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                    <!-- Mobile Field -->
+                    <div>
+                        <label for="mobile" class="block text-sm text-gray-600 mb-1">Mobile*</label>
+                        <input type="text" id="mobile" name="mobile" placeholder="Enter mobile number" required
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                    <!-- Address Field -->
+                    <div>
+                        <label for="address" class="block text-sm text-gray-600 mb-1">Address</label>
+                        <textarea id="address" name="address" placeholder="Enter address"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-orange-500 focus:outline-none"></textarea>
+                    </div>
+                    <!-- Submit Button -->
+                    <button id="submit"
+                        class="bg-orange-500 text-white py-2 px-6 rounded-full shadow hover:bg-orange-600">
+                        GO
+                    </button>
+                </form>
+            </div>
+
+            <!-- Checkout-->
+            <div class="bg-[#f7d2bb] border border-orange-200 p-6 rounded shadow flex justify-center">
+                <!-- <p class="text-gray-500 text-sm text-center">Enter customer details to proceed to checkout</p> -->
+                <div class="w-full">
+                    <p class="text-orange-600 text-2xl font-semibold mb-2">Details Entered</p>
+                    <hr class="bg-orange-500 border-0 h-[0.9px] rounded">
+                    <p class="text-orange-700 font-bold text-xl my-2">Name :</p>
+                    <p class="text-white bg-orange-500 w-auto rounded-xl px-5 py-1 text-xl" id="name-display">Customer
+                    </p>
+                    <p class="text-orange-700 font-bold text-xl my-2">Mobile :</p>
+                    <p class="text-white bg-orange-500 w-auto rounded-xl px-5 py-1 text-xl" id="mobile-display">12345567
+                    </p>
+                    <p class="text-orange-700 font-bold text-xl my-2">Address :</p>
+                    <p class="text-white bg-orange-500 w-auto rounded-xl px-5 py-1 text-xl" id="address-display">None
+                    </p>
+
+
+                    <button id="submit"
+                        class="bg-orange-500 text-white py-2 px-6 rounded-full shadow hover:bg-orange-600 mt-8">
+                        Next
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="cashier.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin Portal</title>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <!-- Container -->
+    <div class="container mx-auto p-4 grid gap-4">
+        <!-- Navbar -->
+        <div class="navbar flex justify-between items-center bg-white p-4 rounded shadow">
+            <!-- Logo Section -->
+            <div class="logo text-orange-500 font-bold text-lg">
+                Logo
+            </div>
+            <!-- Shop Name Section -->
+            <div class="shop-name text-center">
+                <h1 class="text-gray-800 text-xl font-semibold">Shop Name</h1>
+                <p id="dayDate"class="date text-gray-500 text-sm">Day, Date (OPTIONAL)</p>
+            </div>
+            
+            <!-- Logout Section -->
+            <div class="logout mt-2 md:mt-0 flex gap-5">
+                <div class="analytics invert-0">
+                    <a href="admin.html"><img src="images/image (1).png"
+                        class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 h-10 invert-0">
+                    </a>
+                </div>
+                <a href="login.html">
+                    <button class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600">
+                        Logout
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+            <!-- Sidebar -->
+            <div
+                class="bg-white border border-gray-200 p-6 rounded shadow flex flex-col items-center md:col-span-1 col-span-2 md:row-span-2">
+                <div class="w-20 h-20 bg-orange-300 rounded-full flex justify-center items-center text-gray-700 mb-4">
+                    ICON
+                </div>
+                <h2 class="text-lg font-bold text-orange-600 mb-1">Admin</h2>
+                <p class="text-sm text-gray-500 mb-6">admin@example.com</p>
+                <button class="bg-orange-600 text-white py-2 px-6 rounded-full shadow hover:bg-orange-700 mb-6">
+                    ADMIN DASHBOARD
+                </button>
+            </div>
+
+            <!-- Top Selling Stocks Section -->
+            <div class="col-span-2 bg-white border border-gray-200 p-6 rounded shadow md:row-span-2">
+                <h2 class="text-orange-600 text-xl font-semibold mb-2">Top Selling Stocks</h2>
+                <hr class="bg-orange-500 border-0 h-[0.9px] w-full mb-2">
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Stock Item Example -->
+                    <div class="bg-gray-50 p-4 rounded shadow text-center">
+                        <h3 class="text-gray-800 font-semibold text-lg">Stock 1</h3>
+                        <p class="text-gray-500">Details</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded shadow text-center">
+                        <h3 class="text-gray-800 font-semibold text-lg">Stock 2</h3>
+                        <p class="text-gray-500">Details</p>
+                    </div>
+                    <!-- Repeat for other stocks -->
+                </div>
+            </div>
+
+            <!-- Recent Orders Section -->
+            <div class="bg-white border border-gray-200 p-6 rounded shadow">
+                <h2 class="text-orange-600 text-xl font-semibold mb-2">Recent Orders (Last 24hrs)</h2>
+                <hr class="bg-orange-500 border-0 h-[0.9px] w-full mb-2 rounded-xl">
+                <div class="space-y-4">
+                    <!-- Order Example -->
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-800">Order #1</p>
+                        <p class="text-gray-500">Status: Completed</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-800">Order #2</p>
+                        <p class="text-gray-500">Status: Pending</p>
+                    </div>
+                    <!-- Repeat for other orders -->
+                </div>
+            </div>
+
+            <!-- Urgently Needed Stocks Section -->
+            <div class="bg-white border border-gray-200 p-6 rounded shadow md:col-start-4">
+                <h2 class="text-orange-600 text-xl font-semibold mb-2">Urgently Needed Stocks</h2>
+                <hr class="bg-orange-500 border-0 h-[0.9px] w-full mb-2 rounded-xl">
+                <div class="space-y-4">
+                    <!-- Stock Example -->
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-800">Stock 1</p>
+                        <p class="text-red-500 font-bold">Urgent</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-800">Stock 2</p>
+                        <p class="text-red-500 font-bold">Urgent</p>
+                    </div>
+                    <!-- Repeat for other stocks -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Stock Dropdown -->
+        <div class="bg-white p-6 rounded shadow mt-6">
+            <h2 class="text-orange-600 text-xl font-semibold mb-2">Select Stock to View</h2>
+            <select class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                <option value="">Select a Stock</option>
+                <option value="stock1">Stock 1</option>
+                <option value="stock2">Stock 2</option>
+                <option value="stock3">Stock 3</option>
+                <!-- Add more stock options -->
+            </select>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+
+</html>
